@@ -7,8 +7,8 @@
 
 YoutubeDL::YoutubeDL()
 {
-    #ifdef Q_OS_WIN32
-    this->program = "youtube-dl.exe";
+    #ifdef Q_OS_WIN
+    this->program = QApplication::applicationDirPath() + "/youtube-dl.exe";
     #else
     this->program = "youtube-dl"; // assuming it is in PATH on other platforms
     #endif
