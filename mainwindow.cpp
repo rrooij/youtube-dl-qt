@@ -4,7 +4,6 @@
 #include "youtubedl.h"
 
 #include <QFileDialog>
-#include <QtConcurrent/QtConcurrent>
 
 
 MainWindow::MainWindow(QWidget *parent) :
