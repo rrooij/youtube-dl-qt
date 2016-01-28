@@ -14,6 +14,7 @@ class OutputWindow : public QWidget
 public:
     explicit OutputWindow(QWidget *parent = 0);
     ~OutputWindow();
+    void setText(QString text);
 
 private:
     Ui::OutputWindow *ui;

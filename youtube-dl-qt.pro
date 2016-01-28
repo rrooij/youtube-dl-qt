@@ -13,8 +13,13 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    youtubedl.cpp \
+    outputwindow.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    youtubedl.h \
+    outputwindow.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    outputwindow.ui
