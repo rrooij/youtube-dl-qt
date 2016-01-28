@@ -17,9 +17,11 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
+    this->setCursor(Qt::WaitCursor);
     YoutubeDL *ytdl = new YoutubeDL();
     QString output = ytdl->getUrl(this->ui->videoUrlEdit->text());
     OutputWindow *outputWindow = new OutputWindow();
     outputWindow->setText(output);
     outputWindow->show();
+    this->setCursor(Qt::ArrowCursor);
 }
