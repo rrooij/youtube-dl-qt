@@ -7,7 +7,6 @@ class YoutubeDL
 {
 public:
     YoutubeDL();
-    ~YoutubeDL();
     QString getUrl(QString url);
     QProcess *getYtdl();
     void startDownload(QString url, QString workingDirectory);

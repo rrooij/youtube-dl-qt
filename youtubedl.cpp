@@ -17,11 +17,6 @@ YoutubeDL::YoutubeDL()
     this->ytdl->setProcessChannelMode(QProcess::MergedChannels);
 }
 
-YoutubeDL::~YoutubeDL()
-{
-    delete this->ytdl;
-}
-
 QString YoutubeDL::getUrl(QString url)
 {
     this->arguments << "-g" << url;
