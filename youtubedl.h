@@ -9,6 +9,7 @@ public:
     YoutubeDL();
     ~YoutubeDL();
     QString getUrl(QString url);
+    QProcess *getYtdl();
 private:
     QStringList arguments;
     QString program;

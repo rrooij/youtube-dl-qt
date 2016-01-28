@@ -25,3 +25,8 @@ QString YoutubeDL::getUrl(QString url)
     QString output(this->ytdl->readAllStandardOutput());
     return output;
 }
+
+QProcess YoutubeDL::getYtdl()
+{
+    return this->ytdl;
+}
