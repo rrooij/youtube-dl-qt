@@ -45,10 +45,13 @@ void MainWindow::actionRetrieveUrl()
 void MainWindow::actionDownload()
 {
     QString saveDirectory = QFileDialog::getExistingDirectory();
-    OutputWindow *outputWindow = new OutputWindow();
-    outputWindow->show();
-    YoutubeDL *ytdl = new YoutubeDL();
-    outputWindow->setYtdl(ytdl->getYtdl());
-    outputWindow->connect(ytdl->getYtdl(), SIGNAL(readyRead()), outputWindow, SLOT(readyRead()));
-    ytdl->startDownload(this->ui->videoUrlEdit->text(), saveDirectory);
+    if (!saveDirectory.isEmpty())
+    {
+        OutputWindow *outputWindow = new OutputWindow();
+        outputWindow->show();
+        YoutubeDL *ytdl = new YoutubeDL();
+        outputWindow->setYtdl(ytdl->getYtdl());
+        outputWindow->connect(ytdl->getYtdl(), SIGNAL(readyRead()), outputWindow, SLOT(readyRead()));
+        ytdl->startDownload(this->ui->videoUrlEdit->text(), saveDirectory);
+    }
 }
