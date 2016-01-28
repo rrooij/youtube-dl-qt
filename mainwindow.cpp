@@ -34,8 +34,8 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::actionRetrieveUrl()
 {
     this->setCursor(Qt::WaitCursor);
-    YoutubeDL *ytdl = new YoutubeDL();
-    QString output = ytdl->getUrl(this->ui->videoUrlEdit->text());
+    YoutubeDL ytdl;
+    QString output = ytdl.getUrl(this->ui->videoUrlEdit->text());
     OutputWindow *outputWindow = new OutputWindow();
     outputWindow->setText(output);
     outputWindow->show();
@@ -49,9 +49,9 @@ void MainWindow::actionDownload()
     {
         OutputWindow *outputWindow = new OutputWindow();
         outputWindow->show();
-        YoutubeDL *ytdl = new YoutubeDL();
-        outputWindow->setYtdl(ytdl->getYtdl());
-        outputWindow->connect(ytdl->getYtdl(), SIGNAL(readyRead()), outputWindow, SLOT(readyRead()));
-        ytdl->startDownload(this->ui->videoUrlEdit->text(), saveDirectory);
+        YoutubeDL ytdl;
+        outputWindow->setYtdl(ytdl.getYtdl());
+        outputWindow->connect(ytdl.getYtdl(), SIGNAL(readyRead()), outputWindow, SLOT(readyRead()));
+        ytdl.startDownload(this->ui->videoUrlEdit->text(), saveDirectory);
     }
 }
