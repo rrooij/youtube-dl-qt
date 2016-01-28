@@ -14,6 +14,7 @@ YoutubeDL::YoutubeDL()
     #endif
     QObject *parent = QApplication::instance();
     this->ytdl = new QProcess(parent);
+    this->ytdl->setProcessChannelMode(QProcess::MergedChannels);
 }
 
 QString YoutubeDL::getUrl(QString url)
