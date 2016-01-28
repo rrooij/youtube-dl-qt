@@ -19,7 +19,7 @@ YoutubeDL::YoutubeDL()
 
 YoutubeDL::~YoutubeDL()
 {
-    delete this->YoutubeDL;
+    delete this->ytdl;
 }
 
 QString YoutubeDL::getUrl(QString url)
