@@ -3,6 +3,10 @@
 #include "outputwindow.h"
 #include "youtubedl.h"
 
+#include <QFileDialog>
+#include <QtConcurrent/QtConcurrent>
+
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -22,9 +26,10 @@ void MainWindow::on_pushButton_clicked()
     case 0: // Fetch url
         this->actionRetrieveUrl();
         break;
+    case 1: // Download
+        actionDownload();
+        break;
     }
-
-
 }
 
 void MainWindow::actionRetrieveUrl()
@@ -36,4 +41,15 @@ void MainWindow::actionRetrieveUrl()
     outputWindow->setText(output);
     outputWindow->show();
     this->setCursor(Qt::ArrowCursor);
+}
+
+void MainWindow::actionDownload()
+{
+    QString saveDirectory = QFileDialog::getExistingDirectory();
+    OutputWindow *outputWindow = new OutputWindow();
+    outputWindow->show();
+    YoutubeDL *ytdl = new YoutubeDL();
+    outputWindow->setYtdl(ytdl->getYtdl());
+    outputWindow->connect(ytdl->getYtdl(), SIGNAL(readyRead()), outputWindow, SLOT(readyRead()));
+    ytdl->startDownload(this->ui->videoUrlEdit->text(), saveDirectory);
 }

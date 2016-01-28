@@ -26,7 +26,14 @@ QString YoutubeDL::getUrl(QString url)
     return output;
 }
 
-QProcess YoutubeDL::getYtdl()
+void YoutubeDL::startDownload(QString url, QString workingDirectory)
+{
+    this->arguments << url;
+    this->ytdl->setWorkingDirectory(workingDirectory);
+    this->ytdl->start(this->program, this->arguments);
+}
+
+QProcess* YoutubeDL::getYtdl()
 {
     return this->ytdl;
 }

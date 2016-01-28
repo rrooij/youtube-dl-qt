@@ -1,6 +1,9 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "youtubedl.h"
+#include "outputwindow.h"
+
 #include <QMainWindow>
 
 namespace Ui {
@@ -17,10 +20,11 @@ public:
 
 private slots:
     void on_pushButton_clicked();
-    void actionRetrieveUrl();
 
 private:
     Ui::MainWindow *ui;
+    void actionRetrieveUrl();
+    void actionDownload();
 };
 
 #endif // MAINWINDOW_H
