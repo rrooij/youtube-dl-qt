@@ -9,6 +9,7 @@ OutputWindow::OutputWindow(QWidget *parent) :
     ui(new Ui::OutputWindow)
 {
     ui->setupUi(this);
+    this->setAttribute(Qt::WA_DeleteOnClose);
 }
 
 OutputWindow::~OutputWindow()
