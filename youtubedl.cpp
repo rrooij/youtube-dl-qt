@@ -1,9 +1,9 @@
 #include "youtubedl.h"
 
 #include <QApplication>
+#include <QString>
 #include <QStringList>
 #include <QProcess>
-#include <QString>
 
 YoutubeDL::YoutubeDL()
 {
