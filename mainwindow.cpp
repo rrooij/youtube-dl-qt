@@ -4,6 +4,9 @@
 #include "youtubedl.h"
 
 #include <QFileDialog>
+#include <QMessageBox>
+#include <QRegExp>
+#include <QRegExpValidator>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -20,6 +23,11 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
+    if (!isValidUrl(this->ui->videoUrlEdit->text()))
+    {
+        QMessageBox::information(this, "Wrong URL", "Please specify a valid URL", QMessageBox::Ok);
+        return;
+    }
     int index = this->ui->modeComboBox->currentIndex();
     switch(index) {
     case 0: // Fetch url
@@ -40,6 +48,18 @@ void MainWindow::actionRetrieveUrl()
     outputWindow->setText(output);
     outputWindow->show();
     this->setCursor(Qt::ArrowCursor);
+}
+
+bool MainWindow::isValidUrl(QString url)
+{
+    QRegExp urlRegex("^(http|https)://[a-z0-9]+([-.]{1}[a-z0-9]+)*.[a-z]{2,5}(([0-9]{1,5})?/?.*)$");
+    QRegExpValidator validator(urlRegex);
+    int index = 0;
+
+    if(validator.validate(url, index) == QValidator::Acceptable) {
+        return true;
+    }
+    return false;
 }
 
 void MainWindow::actionDownload()
