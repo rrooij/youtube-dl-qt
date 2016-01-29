@@ -2,7 +2,6 @@
 #include "ui_outputwindow.h"
 
 #include <QDialog>
-#include <QMessageBox>
 
 OutputWindow::OutputWindow(QWidget *parent) :
     QWidget(parent),
