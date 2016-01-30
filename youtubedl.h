@@ -14,6 +14,7 @@ private:
     QStringList arguments;
     QString program;
     QProcess *ytdl;
+    void setFormat(QString format);
 };
 
 #endif // YOUTUBEDL_H

@@ -26,6 +26,11 @@ QString YoutubeDL::getUrl(QString url)
     return output;
 }
 
+void YoutubeDL::setFormat(QString format)
+{
+    this->arguments << "-f" << format;
+}
+
 void YoutubeDL::startDownload(QString url, QString workingDirectory)
 {
     this->arguments << url;
