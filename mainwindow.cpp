@@ -25,7 +25,7 @@ void MainWindow::on_pushButton_clicked()
 {
     if (!isValidUrl(this->ui->videoUrlEdit->text()))
     {
-        QMessageBox::information(this, "Wrong URL", "Please specify a valid URL", QMessageBox::Ok);
+        QMessageBox::information(this, tr("Wrong URL"), tr("Please specify a valid URL"), QMessageBox::Ok);
         return;
     }
     int index = this->ui->modeComboBox->currentIndex();
