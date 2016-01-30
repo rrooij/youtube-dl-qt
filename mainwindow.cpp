@@ -70,6 +70,10 @@ void MainWindow::actionDownload()
         OutputWindow *outputWindow = new OutputWindow();
         outputWindow->show();
         YoutubeDL ytdl;
+        if (ui->checkBoxAudioOnly->isChecked())
+        {
+            ytdl.setFormat("bestaudio");
+        }
         outputWindow->setYtdl(ytdl.getYtdl());
         outputWindow->connect(ytdl.getYtdl(), SIGNAL(readyRead()), outputWindow, SLOT(readyRead()));
         ytdl.startDownload(this->ui->videoUrlEdit->text(), saveDirectory);
