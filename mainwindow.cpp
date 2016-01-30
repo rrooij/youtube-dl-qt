@@ -23,11 +23,11 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    if (!isValidUrl(this->ui->videoUrlEdit->text()))
-    {
+    if (!isValidUrl(this->ui->videoUrlEdit->text())) {
         QMessageBox::information(this, tr("Wrong URL"), tr("Please specify a valid URL"), QMessageBox::Ok);
         return;
     }
+
     int index = this->ui->modeComboBox->currentIndex();
     switch(index) {
     case 0: // Fetch url
@@ -65,15 +65,15 @@ bool MainWindow::isValidUrl(QString url)
 void MainWindow::actionDownload()
 {
     QString saveDirectory = QFileDialog::getExistingDirectory();
-    if (!saveDirectory.isEmpty())
-    {
+    if (!saveDirectory.isEmpty()) {
         OutputWindow *outputWindow = new OutputWindow();
         outputWindow->show();
         YoutubeDL ytdl;
-        if (ui->checkBoxAudioOnly->isChecked())
-        {
+
+        if (ui->checkBoxAudioOnly->isChecked()) {
             ytdl.setFormat("bestaudio");
         }
+
         outputWindow->setYtdl(ytdl.getYtdl());
         outputWindow->connect(ytdl.getYtdl(), SIGNAL(readyRead()), outputWindow, SLOT(readyRead()));
         ytdl.startDownload(this->ui->videoUrlEdit->text(), saveDirectory);
