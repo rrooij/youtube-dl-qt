@@ -33,3 +33,6 @@ Makefile*
 
 #QtCtreator CMake
 CMakeLists.txt.user
+
+#Binary
+youtube-dl-qt
