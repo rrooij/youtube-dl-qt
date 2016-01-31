@@ -49,7 +49,7 @@ youtube-dl
 ffmpeg (optional)
 ```
 
-I could be missing one. If this is a case, report an issue.
+I could be missing one. If this is the case, report an issue.
 
 ## Compiling
 
