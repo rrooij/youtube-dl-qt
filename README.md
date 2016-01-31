@@ -40,6 +40,17 @@ Note that the youtube-dl version in the Ubuntu repositories is outdated and may
 not support all the sites you expect. To install the latest version of youtube-dl
 check out their [installation instructions](https://github.com/rg3/youtube-dl#installation).
 
+#### Arch Linux
+
+Packages needed:
+```
+qt5-base
+youtube-dl
+ffmpeg (optional)
+```
+
+I could be missing one. If this is a case, report an issue.
+
 ## Compiling
 
 First, clone the git repository.
