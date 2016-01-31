@@ -25,7 +25,6 @@ private:
     Ui::MainWindow *ui;
     void actionRetrieveUrl();
     void actionDownload();
-    bool isValidUrl(QString url);
 };
 
 #endif // MAINWINDOW_H

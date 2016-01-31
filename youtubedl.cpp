@@ -1,6 +1,8 @@
 #include "youtubedl.h"
 
 #include <QApplication>
+#include <QRegExp>
+#include <QRegExpValidator>
 #include <QString>
 #include <QStringList>
 #include <QProcess>
@@ -24,6 +26,18 @@ QString YoutubeDL::getUrl(QString url)
     this->ytdl->waitForFinished();
     QString output(this->ytdl->readAllStandardOutput());
     return output;
+}
+
+bool YoutubeDL::isValidUrl(QString url)
+{
+    QRegExp urlRegex("^(http|https)://[a-z0-9]+([-.]{1}[a-z0-9]+)*.[a-z]{2,5}(([0-9]{1,5})?/?.*)$");
+    QRegExpValidator validator(urlRegex);
+    int index = 0;
+
+    if(validator.validate(url, index) == QValidator::Acceptable) {
+        return true;
+    }
+    return false;
 }
 
 void YoutubeDL::setFormat(QString format)

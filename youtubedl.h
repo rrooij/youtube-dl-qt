@@ -9,6 +9,7 @@ public:
     YoutubeDL();
     QString getUrl(QString url);
     QProcess *getYtdl();
+    static bool isValidUrl(QString url);
     void setFormat(QString format);
     void startDownload(QString url, QString workingDirectory);
 private:
