@@ -2,8 +2,6 @@
 
 Simple QT-frontend for [youtube-dl](https://rg3.github.io/youtube-dl/).
 
-It is assumed that youtube-dl is in PATH.
-
 youtube-dl is able to download lots of videos from streaming sites, not only from YouTube.
 See [supported sites](https://rg3.github.io/youtube-dl/supportedsites.html).
 
