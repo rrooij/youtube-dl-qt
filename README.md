@@ -4,6 +4,17 @@ Simple QT-frontend for youtube-dl. It only supports retrieving a video URL for n
 
 It is assumed that youtube-dl is in PATH.
 
+## Installing
+
+### GNU/Linux
+Check out the [requirements](#requirements). You can choose to compile the binary yourself or
+use the binary I compiled (found in Releases). Be sure to give the binary execution rights.
+
+
+### Windows
+There is an executable installer for Windows found in the releases called `setup_windows.exe`.
+A portable version can be found in the 7zip archive `youtube-dl-qt-windows`.
+
 ## Requirements
 
 ### GNU/Linux
@@ -32,3 +43,5 @@ make
 ```
 
 The executable should be named `youtube-dl-qt` and can be run by `./youtube-dl-qt`.
+
+
