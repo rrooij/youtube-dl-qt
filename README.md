@@ -25,6 +25,21 @@ A portable version can be found in the 7zip archive `youtube-dl-qt-windows`.
 
 Both are available in most repositories.
 
+#### Ubuntu/Mint
+
+The packages you need to install are:
+```
+libqt5core5a
+libqt5gui5
+libqt5widgets5
+youtube-dl
+ffmpeg (optional)
+```
+
+Note that the youtube-dl version in the Ubuntu repositories is outdated and may
+not support all the sites you expect. To install the latest version of youtube-dl
+check out their [installation instructions](https://github.com/rg3/youtube-dl#installation).
+
 ## Compiling
 
 First, clone the git repository.
