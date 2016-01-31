@@ -1,6 +1,6 @@
 #youtube-dl-qt
 
-Simple QT-frontend for youtube-dl. It only supports retrieving a video URL for now.
+Simple QT-frontend for [youtube-dl](https://rg3.github.io/youtube-dl/).
 
 It is assumed that youtube-dl is in PATH.
 
