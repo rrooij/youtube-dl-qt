@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "formatselectionwindow.h"
 #include "ui_mainwindow.h"
 #include "outputwindow.h"
 #include "youtubedl.h"
@@ -33,6 +34,14 @@ void MainWindow::on_pushButton_clicked()
         break;
     case 1: // Download
         actionDownload();
+        break;
+    case 2: // Format download
+        YoutubeDL ytdl;
+        ytdl.fetchAvailableFormats(ui->videoUrlEdit->text());
+        FormatSelectionWindow *formatWindow = new FormatSelectionWindow();
+        formatWindow->setYoutubeDl(ytdl);
+        formatWindow->setInputUrl(ui->videoUrlEdit->text());
+        formatWindow->show();
         break;
     }
 }

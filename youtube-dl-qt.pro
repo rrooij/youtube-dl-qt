@@ -15,11 +15,16 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     youtubedl.cpp \
-    outputwindow.cpp
+    outputwindow.cpp \
+    mediaformat.cpp \
+    formatselectionwindow.cpp
 
 HEADERS  += mainwindow.h \
     youtubedl.h \
-    outputwindow.h
+    outputwindow.h \
+    mediaformat.h \
+    formatselectionwindow.h
 
 FORMS    += mainwindow.ui \
-    outputwindow.ui
+    outputwindow.ui \
+    formatselectionwindow.ui
