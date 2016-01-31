@@ -2,6 +2,8 @@
 
 Simple QT-frontend for [youtube-dl](https://rg3.github.io/youtube-dl/).
 
+![youtube-dl-qt](https://rrooij.github.io/youtube-dl-qt/img/ytdl-qt-screenshot.png)
+
 youtube-dl is able to download lots of videos from streaming sites, not only from YouTube.
 See [supported sites](https://rg3.github.io/youtube-dl/supportedsites.html).
 
