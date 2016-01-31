@@ -6,7 +6,7 @@
 # define installer name
 OutFile "setup.exe"
 
-# set desktop as install directory
+# set Program Files as install directory
 InstallDir $PROGRAMFILES\youtube-dl-qt
 
 DirText "This will install youtube-dl-qt on your computer. Choose a directory"
