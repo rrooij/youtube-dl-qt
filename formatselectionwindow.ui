@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Format selection</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -53,8 +53,8 @@
     </widget>
    </item>
   </layout>
+  <zorder>pushButton</zorder>
   <zorder>tableWidget</zorder>
-  <zorder>formLayoutWidget</zorder>
  </widget>
  <resources/>
  <connections/>
