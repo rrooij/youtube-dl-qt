@@ -58,7 +58,7 @@
       </item>
       <item>
        <property name="text">
-        <string>Download specific format (advanced users)</string>
+        <string>Download specific format (advanced users, experimental)</string>
        </property>
       </item>
      </widget>
