@@ -13,51 +13,37 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QWidget" name="formLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>480</y>
-     <width>751</width>
-     <height>80</height>
-    </rect>
-   </property>
-   <layout class="QFormLayout" name="formLayout_2">
-    <item row="0" column="0">
-     <widget class="QPushButton" name="pushButton">
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SingleSelection</enum>
+     </property>
+     <column>
       <property name="text">
-       <string>Download Format</string>
+       <string>Id</string>
       </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QTableWidget" name="tableWidget">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>751</width>
-     <height>481</height>
-    </rect>
-   </property>
-   <column>
-    <property name="text">
-     <string>Id</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Extension</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Format</string>
-    </property>
-   </column>
-  </widget>
-  <zorder>verticalLayoutWidget</zorder>
+     </column>
+     <column>
+      <property name="text">
+       <string>Extension</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Format</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Download Format</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
   <zorder>tableWidget</zorder>
   <zorder>formLayoutWidget</zorder>
  </widget>
