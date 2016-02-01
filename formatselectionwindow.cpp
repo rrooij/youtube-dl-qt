@@ -50,7 +50,7 @@ void FormatSelectionWindow::on_pushButton_clicked()
         OutputWindow *outputWindow = new OutputWindow();
         outputWindow->show();
         int currentRow = ui->tableWidget->currentRow();
-        QString format = ui->tableWidget->itemAt(0, currentRow)->text();
+        QString format = ui->tableWidget->item(currentRow, 0)->text();
         youtubeDl = YoutubeDL();
         youtubeDl.setFormat(format);
         outputWindow->setYtdl(youtubeDl.getYtdl());
