@@ -43,7 +43,6 @@ void MainWindow::on_pushButton_clicked()
         formatWindow->setYoutubeDl(ytdl);
         formatWindow->setInputUrl(ui->videoUrlEdit->text());
         this->setCursor(Qt::ArrowCursor);
-        formatWindow->show();
         break;
     }
 }

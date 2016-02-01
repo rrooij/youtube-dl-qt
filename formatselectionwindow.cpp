@@ -30,6 +30,7 @@ void FormatSelectionWindow::populateTable(QVector<MediaFormat> formats)
     if (formats.length() == 0) {
         QMessageBox::information(this, "No formats found", "No formats found. Note that playlists aren't supported yet", QMessageBox::Ok);
         this->close();
+        return;
     }
     ui->tableWidget->setRowCount(formats.length());
     for(int i = 0; i < formats.length(); ++i) {
@@ -41,6 +42,7 @@ void FormatSelectionWindow::populateTable(QVector<MediaFormat> formats)
         ui->tableWidget->setItem(i, 1, extension);
         ui->tableWidget->setItem(i, 2, formatText);
     }
+    show();
 }
 
 void FormatSelectionWindow::on_pushButton_clicked()
