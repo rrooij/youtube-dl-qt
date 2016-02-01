@@ -26,7 +26,7 @@ YoutubeDL::YoutubeDL()
 
 QJsonObject YoutubeDL::createJsonObject(QString url)
 {
-    arguments << "-j" << url;
+    arguments << "-j" << "--no-playlist" << url;
     ytdl->setProcessChannelMode(QProcess::SeparateChannels);
     ytdl->start(this->program, this->arguments);
     ytdl->waitForFinished();
