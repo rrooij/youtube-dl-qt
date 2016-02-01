@@ -37,10 +37,12 @@ void MainWindow::on_pushButton_clicked()
         break;
     case 2: // Format download
         YoutubeDL ytdl;
+        this->setCursor(Qt::WaitCursor);
         ytdl.fetchAvailableFormats(ui->videoUrlEdit->text());
         FormatSelectionWindow *formatWindow = new FormatSelectionWindow();
         formatWindow->setYoutubeDl(ytdl);
         formatWindow->setInputUrl(ui->videoUrlEdit->text());
+        this->setCursor(Qt::ArrowCursor);
         formatWindow->show();
         break;
     }

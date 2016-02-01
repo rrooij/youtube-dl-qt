@@ -5,6 +5,7 @@
 
 #include <QFileDialog>
 #include <QTableWidgetItem>
+#include <QMessageBox>
 
 FormatSelectionWindow::FormatSelectionWindow(QWidget *parent) :
     QWidget(parent),
@@ -26,6 +27,10 @@ void FormatSelectionWindow::setYoutubeDl(const YoutubeDL &value)
 
 void FormatSelectionWindow::populateTable(QVector<MediaFormat> formats)
 {
+    if (formats.length() == 0) {
+        QMessageBox::information(this, "No formats found", "No formats found. Note that playlists aren't supported yet", QMessageBox::Ok);
+        this->close();
+    }
     ui->tableWidget->setRowCount(formats.length());
     for(int i = 0; i < formats.length(); ++i) {
         MediaFormat format = formats[i];
