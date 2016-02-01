@@ -56,7 +56,7 @@ void FormatSelectionWindow::on_pushButton_clicked()
         outputWindow->setYtdl(youtubeDl.getYtdl());
         outputWindow->connect(youtubeDl.getYtdl(), SIGNAL(readyRead()), outputWindow, SLOT(readyRead()));
         youtubeDl.startDownload(inputUrl, saveDirectory);
-        this->destroy(true, false);
+        this->close();
     }
 
 }
