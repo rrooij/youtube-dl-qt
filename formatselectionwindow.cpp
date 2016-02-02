@@ -3,6 +3,7 @@
 #include "outputwindow.h"
 #include "youtubedl.h"
 
+#include <QAbstractItemView>
 #include <QFileDialog>
 #include <QTableWidgetItem>
 #include <QMessageBox>
@@ -12,6 +13,8 @@ FormatSelectionWindow::FormatSelectionWindow(QWidget *parent) :
     ui(new Ui::FormatSelectionWindow)
 {
     ui->setupUi(this);
+    // Disable editing
+    ui->tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
 }
 
 FormatSelectionWindow::~FormatSelectionWindow()
