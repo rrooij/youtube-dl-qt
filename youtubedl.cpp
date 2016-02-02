@@ -10,7 +10,6 @@
 #include <QString>
 #include <QStringList>
 #include <QProcess>
-#include <QVariantList>
 
 YoutubeDL::YoutubeDL()
 {
