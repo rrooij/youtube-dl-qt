@@ -1,0 +1,36 @@
+pkgname=youtube-dl-qt-git
+_gitname=youtube-dl-qt
+pkgver=64.gae4db67
+pkgrel=1
+pkgdesc="Qt frontend for youtube-dl"
+arch=('i686' 'x86_64')
+url="https://github.com/rrooij/youtube-dl-qt"
+license=('GPLi3')
+groups=()
+depends=('qt5-base' 'youtube-dl')
+makedepends=('git' 'make')
+checkdepends=()
+optdepends=('ffmpeg: for certain youtube-dl functionality')
+provides=('youtube-dl-qt')
+options=()
+install=
+changelog=
+source=("git+https://github.com/rrooij/youtube-dl-qt")
+noextract=()
+md5sums=('SKIP')
+
+pkgver() {
+  cd "$srcdir/$_gitname"
+  echo "$(git rev-list --count HEAD).g$(git rev-parse --short HEAD)"
+}
+
+build() {
+	cd "$srcdir/$_gitname"
+	qmake -config release
+	make
+}
+
+package() {
+	cd "$srcdir/$_gitname"
+	make DESTDIR="$pkgdir/" install
+}
