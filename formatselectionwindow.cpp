@@ -38,9 +38,11 @@ void FormatSelectionWindow::populateTable(QVector<MediaFormat> formats)
         QTableWidgetItem* formatId = new QTableWidgetItem(format.getFormatId());
         QTableWidgetItem* extension = new QTableWidgetItem(format.getExtension());
         QTableWidgetItem* formatText = new QTableWidgetItem(format.getFormat());
+        QTableWidgetItem* resolution = new QTableWidgetItem(format.getResolution());
         ui->tableWidget->setItem(i, 0, formatId);
         ui->tableWidget->setItem(i, 1, extension);
         ui->tableWidget->setItem(i, 2, formatText);
+        ui->tableWidget->setItem(i, 3, resolution);
     }
     show();
 }

@@ -43,6 +43,11 @@
        <string>Format</string>
       </property>
      </column>
+     <column>
+      <property name="text">
+       <string>Resolution</string>
+      </property>
+     </column>
     </widget>
    </item>
    <item>

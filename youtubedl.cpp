@@ -49,6 +49,11 @@ void YoutubeDL::fetchAvailableFormats(QString url)
         format.setFormat(formatObject["format"].toString());
         format.setExtension(formatObject["ext"].toString());
         format.setNote(formatObject["format_note"].toString());
+        if (formatObject.contains("height") && !formatObject["height"].isNull()) {
+            QString resolution = QString::number(formatObject["width"].toDouble()) + "x"
+                    + QString::number(formatObject["height"].toDouble());
+            format.setResolution(resolution);
+        }
         formats.append(format);
     }
     this->formats = formats;
