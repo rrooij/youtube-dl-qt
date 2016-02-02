@@ -54,6 +54,7 @@ void YoutubeDL::fetchAvailableFormats(QString url)
                     + QString::number(formatObject["height"].toDouble());
             format.setResolution(resolution);
         }
+        format.setVcodec(formatObject["vcodec"].toString().trimmed());
         format.setAcodec(formatObject["acodec"].toString().trimmed());
         formats.append(format);
     }

@@ -74,3 +74,13 @@ void MediaFormat::setAcodec(const QString &value)
 {
     acodec = value;
 }
+
+QString MediaFormat::getVcodec() const
+{
+    return vcodec;
+}
+
+void MediaFormat::setVcodec(const QString &value)
+{
+    vcodec = value;
+}

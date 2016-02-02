@@ -53,6 +53,11 @@
        <string>Audio codec</string>
       </property>
      </column>
+     <column>
+      <property name="text">
+       <string>Video codec</string>
+      </property>
+     </column>
     </widget>
    </item>
    <item>
