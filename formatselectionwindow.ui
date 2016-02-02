@@ -48,6 +48,11 @@
        <string>Resolution</string>
       </property>
      </column>
+     <column>
+      <property name="text">
+       <string>Audio codec</string>
+      </property>
+     </column>
     </widget>
    </item>
    <item>

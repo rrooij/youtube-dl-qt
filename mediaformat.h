@@ -25,6 +25,9 @@ public:
     QString getFormat() const;
     void setFormat(const QString &value);
 
+    QString getAcodec() const;
+    void setAcodec(const QString &value);
+
 private:
     QString formatId;
     QString format;
@@ -32,6 +35,7 @@ private:
     QString resolution;
     QString quality;
     QString note;
+    QString acodec;
 };
 
 #endif // MEDIAFORMAT_H
