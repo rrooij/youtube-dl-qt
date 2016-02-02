@@ -68,9 +68,9 @@ Run:
 ```
 make clean
 qmake -config release
-make
+sudo make install
 ```
 
-The executable should be named `youtube-dl-qt` and can be run by `./youtube-dl-qt`.
+The executable should be named `youtube-dl-qt`.
 
 
