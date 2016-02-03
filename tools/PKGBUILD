@@ -1,7 +1,8 @@
-# Doesn't install yet (?)
+# Installing doesn't work yet
+
 pkgname=youtube-dl-qt-git
 _gitname=youtube-dl-qt
-pkgver=64.gae4db67
+pkgver=66.gebd26a1
 pkgrel=1
 pkgdesc="Qt frontend for youtube-dl"
 arch=('i686' 'x86_64')
@@ -33,5 +34,5 @@ build() {
 
 package() {
 	cd "$srcdir/$_gitname"
-	make -C build DESTDIR="$pkgdir/" install
+	make INSTALL_ROOT="$pkgdir/" install
 }
