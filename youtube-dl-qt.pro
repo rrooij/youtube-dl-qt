@@ -20,19 +20,22 @@ TEMPLATE = app
 INSTALLS += target desktop icon
 
 
-SOURCES += main.cpp\
-        mainwindow.cpp \
-    youtubedl.cpp \
-    outputwindow.cpp \
-    mediaformat.cpp \
-    formatselectionwindow.cpp
+SOURCES +=\
+    src/formatselectionwindow.cpp \
+    src/main.cpp \
+    src/mainwindow.cpp \
+    src/mediaformat.cpp \
+    src/outputwindow.cpp \
+    src/youtubedl.cpp
 
-HEADERS  += mainwindow.h \
-    youtubedl.h \
-    outputwindow.h \
-    mediaformat.h \
-    formatselectionwindow.h
+HEADERS  += \
+    src/formatselectionwindow.h \
+    src/mainwindow.h \
+    src/mediaformat.h \
+    src/outputwindow.h \
+    src/youtubedl.h
 
-FORMS    += mainwindow.ui \
-    outputwindow.ui \
-    formatselectionwindow.ui
+FORMS    += \
+    src/formatselectionwindow.ui \
+    src/mainwindow.ui \
+    src/outputwindow.ui
