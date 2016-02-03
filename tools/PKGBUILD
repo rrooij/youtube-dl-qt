@@ -1,5 +1,3 @@
-# Installing doesn't work yet
-
 pkgname=youtube-dl-qt-git
 _gitname=youtube-dl-qt
 pkgver=66.gebd26a1
