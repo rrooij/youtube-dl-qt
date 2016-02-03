@@ -13,6 +13,8 @@ See [supported sites](https://rg3.github.io/youtube-dl/supportedsites.html).
 Check out the [requirements](#requirements). You can choose to compile the binary yourself or
 use the binary I compiled (found in Releases). Be sure to give the binary execution rights.
 
+#### Arch Linux
+There's a PKGBUILD available in the `tools` directory. Feel free to upload it to the AUR.
 
 ### Windows
 There is an executable installer for Windows found in the releases called `setup_windows.exe`.
