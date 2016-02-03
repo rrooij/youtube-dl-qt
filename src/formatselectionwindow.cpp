@@ -7,6 +7,7 @@
 #include <QFileDialog>
 #include <QTableWidgetItem>
 #include <QMessageBox>
+#include <QVector>
 
 FormatSelectionWindow::FormatSelectionWindow(QWidget *parent) :
     QWidget(parent),
@@ -38,18 +39,17 @@ void FormatSelectionWindow::populateTable(QVector<MediaFormat> formats)
     ui->tableWidget->setRowCount(formats.length());
     for(int i = 0; i < formats.length(); ++i) {
         MediaFormat format = formats[i];
-        QTableWidgetItem* formatId = new QTableWidgetItem(format.getFormatId());
-        QTableWidgetItem* extension = new QTableWidgetItem(format.getExtension());
-        QTableWidgetItem* formatText = new QTableWidgetItem(format.getFormat());
-        QTableWidgetItem* resolution = new QTableWidgetItem(format.getResolution());
-        QTableWidgetItem* acodec = new QTableWidgetItem(format.getAcodec());
-        QTableWidgetItem* vcodec = new QTableWidgetItem(format.getVcodec());
-        ui->tableWidget->setItem(i, 0, formatId);
-        ui->tableWidget->setItem(i, 1, extension);
-        ui->tableWidget->setItem(i, 2, formatText);
-        ui->tableWidget->setItem(i, 3, resolution);
-        ui->tableWidget->setItem(i, 4, acodec);
-        ui->tableWidget->setItem(i, 5, vcodec);
+        QVector<QTableWidgetItem*> widgetItems;
+        widgetItems.append(new QTableWidgetItem(format.getFormatId()));
+        widgetItems.append(new QTableWidgetItem(format.getExtension()));
+        widgetItems.append(new QTableWidgetItem(format.getFormat()));
+        widgetItems.append(new QTableWidgetItem(format.getResolution()));
+        widgetItems.append(new QTableWidgetItem(format.getAcodec()));
+        widgetItems.append(new QTableWidgetItem(format.getVcodec()));
+
+        for (int j = 0; j < widgetItems.length(); ++j) {
+            ui->tableWidget->setItem(i, j, widgetItems[j]);
+        }
     }
     show();
 }
