@@ -1,3 +1,4 @@
+# Doesn't install yet (?)
 pkgname=youtube-dl-qt-git
 _gitname=youtube-dl-qt
 pkgver=64.gae4db67
@@ -32,5 +33,5 @@ build() {
 
 package() {
 	cd "$srcdir/$_gitname"
-	make DESTDIR="$pkgdir/" install
+	make -C build DESTDIR="$pkgdir/" install
 }
