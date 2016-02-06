@@ -6,6 +6,7 @@
 
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QProcess>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -72,6 +73,7 @@ void MainWindow::actionDownload()
 
         outputWindow->setYtdl(ytdl.getYtdl());
         outputWindow->connect(ytdl.getYtdl(), SIGNAL(readyRead()), outputWindow, SLOT(readyRead()));
+        outputWindow->connect(ytdl.getYtdl(), SIGNAL(finished(int, QProcess::ExitStatus)), outputWindow, SLOT(finished(int, QProcess::ExitStatus)));
         ytdl.startDownload(this->ui->videoUrlEdit->text(), saveDirectory);
     }
 }

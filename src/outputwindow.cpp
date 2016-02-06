@@ -2,6 +2,8 @@
 #include "ui_outputwindow.h"
 
 #include <QDialog>
+#include <QMessageBox>
+#include <QProcess>
 
 OutputWindow::OutputWindow(QWidget *parent) :
     QWidget(parent),
@@ -30,4 +32,12 @@ void OutputWindow::setYtdl(QProcess *ytdl)
 void OutputWindow::readyRead()
 {
     this->ui->outputTextArea->document()->setPlainText(this->ytdl->readAll());
+}
+
+void OutputWindow::finished(int exitCode, QProcess::ExitStatus exitStatus)
+{
+    if (exitStatus == QProcess::NormalExit) {
+        QMessageBox::information(this, "Action succesful", "Action completed succesfully", QMessageBox::Ok);
+        this->close();
+    }
 }
