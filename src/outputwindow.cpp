@@ -34,10 +34,10 @@ void OutputWindow::readyRead()
     this->ui->outputTextArea->document()->setPlainText(this->ytdl->readAll());
 }
 
-void OutputWindow::finished(int exitCode, QProcess::ExitStatus exitStatus)
+void OutputWindow::downloadFinished(int exitCode, QProcess::ExitStatus exitStatus)
 {
     if (exitStatus == QProcess::NormalExit) {
-        QMessageBox::information(this, "Action succesful", "Action completed succesfully", QMessageBox::Ok);
+        QMessageBox::information(this, "Download succesful", "Download completed succesfully", QMessageBox::Ok);
         this->close();
     }
 }

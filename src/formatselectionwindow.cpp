@@ -5,6 +5,7 @@
 
 #include <QAbstractItemView>
 #include <QFileDialog>
+#include <QProcess>
 #include <QTableWidgetItem>
 #include <QMessageBox>
 #include <QVector>
@@ -66,7 +67,7 @@ void FormatSelectionWindow::on_pushButton_clicked()
         youtubeDl.setFormat(format);
         outputWindow->setYtdl(youtubeDl.getYtdl());
         outputWindow->connect(youtubeDl.getYtdl(), SIGNAL(readyRead()), outputWindow, SLOT(readyRead()));
-        outputWindow->connect(ytdl.getYtdl(), SIGNAL(finished(int, QProcess::ExitStatus)), outputWindow, SLOT(finished(int, QProcess::ExitStatus)));
+        outputWindow->connect(youtubeDl.getYtdl(), SIGNAL(finished(int, QProcess::ExitStatus)), outputWindow, SLOT(downloadFinished(int, QProcess::ExitStatus)));
         youtubeDl.startDownload(inputUrl, saveDirectory);
         this->close();
     }

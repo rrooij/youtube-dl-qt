@@ -22,7 +22,7 @@ public:
 
 public slots:
     void readyRead();
-    void finished(int exitCode, QProcess::ExitStatus exitStatus);
+    void downloadFinished(int exitCode, QProcess::ExitStatus exitStatus);
 
 private:
     Ui::OutputWindow *ui;
