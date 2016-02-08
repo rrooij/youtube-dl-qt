@@ -41,7 +41,10 @@ libqt5widgets5
 youtube-dl
 ffmpeg (optional)
 ```
-
+For building:
+```
+qtbase5-dev
+```
 Note that the youtube-dl version in the Ubuntu repositories is outdated and may
 not support all the sites you expect. To install the latest version of youtube-dl
 check out their [installation instructions](https://github.com/rg3/youtube-dl#installation).
