@@ -1,0 +1,12 @@
+sudo: required
+dist: trusty # Trusty for qt5
+language: cpp
+
+before_install:
+    - sudo apt-get -qq update
+    - sudo apt-get install -y qtbase5-dev qtbase5-dev-tools
+
+script:
+    - export QT_SELECT=qt5
+    - qmake -config release
+    - make
