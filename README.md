@@ -1,5 +1,7 @@
 #youtube-dl-qt
 
+[![Build Status](https://travis-ci.org/rrooij/youtube-dl-qt.svg?branch=master)](https://travis-ci.org/rrooij/youtube-dl-qt)
+
 Simple QT-frontend for [youtube-dl](https://rg3.github.io/youtube-dl/).
 
 ![youtube-dl-qt](https://rrooij.github.io/youtube-dl-qt/img/ytdl-qt-screenshot.png)
