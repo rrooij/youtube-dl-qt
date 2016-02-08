@@ -31,7 +31,7 @@ A portable version can be found in the 7zip archive `youtube-dl-qt-windows`.
 
 Both are available in most repositories.
 
-#### Ubuntu/Mint
+#### Ubuntu/Mint/Debian
 
 The packages you need to install are:
 ```
@@ -39,7 +39,7 @@ libqt5core5a
 libqt5gui5
 libqt5widgets5
 youtube-dl
-ffmpeg (optional)
+ffmpeg (optional) / libav for Debian
 ```
 For building:
 ```
