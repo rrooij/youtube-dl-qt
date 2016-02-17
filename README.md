@@ -75,6 +75,7 @@ Run:
 ```
 make clean
 qmake -config release
+make
 sudo make install
 ```
 
