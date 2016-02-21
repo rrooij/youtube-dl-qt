@@ -17,7 +17,7 @@ Check out the [requirements](#requirements). You can choose to compile the binar
 use the binary I compiled (found in Releases). Be sure to give the binary execution rights.
 
 #### Arch Linux
-There's a PKGBUILD available in the `tools` directory. Feel free to upload it to the AUR.
+youtube-dl-qt is available in the [AUR](https://aur.archlinux.org/packages/youtube-dl-qt-git/).
 
 ### Windows
 There is an executable installer for Windows found in the releases called `setup_windows.exe`.
