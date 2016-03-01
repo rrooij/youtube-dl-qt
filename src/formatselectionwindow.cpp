@@ -17,6 +17,7 @@ FormatSelectionWindow::FormatSelectionWindow(QWidget *parent) :
     ui->setupUi(this);
     // Disable editing
     ui->tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    this->setAttribute(Qt::WA_DeleteOnClose);
 }
 
 FormatSelectionWindow::~FormatSelectionWindow()
