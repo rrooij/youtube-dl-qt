@@ -1,4 +1,4 @@
-#youtube-dl-qt
+# youtube-dl-qt
 
 [![Build Status](https://travis-ci.org/rrooij/youtube-dl-qt.svg?branch=master)](https://travis-ci.org/rrooij/youtube-dl-qt)
 [![License](https://img.shields.io/badge/License-GPLv3-red.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
