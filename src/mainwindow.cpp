@@ -67,8 +67,18 @@ void MainWindow::actionDownload()
         outputWindow->show();
         YoutubeDL ytdl;
 
+        /*Ignores warings
+            * good for systems without ffmpeg/avconv - otherwise download will stop
+            * also good for playlist downloads with forbidden addresses
+            as it will continue to download the rest of the playlist without stopping*/
+        ytdl.addArguments("-i");
+
         if (ui->checkBoxAudioOnly->isChecked()) {
             ytdl.setFormat("bestaudio");
+        }
+
+        if (ui->checkBoxSubtitles->isChecked()) {
+            ytdl.addArguments("--all-subs");
         }
 
         outputWindow->setYtdl(ytdl.getYtdl());

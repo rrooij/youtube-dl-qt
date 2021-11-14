@@ -21,6 +21,7 @@ public:
     void startDownload(QString url, QString workingDirectory);
     QVector<MediaFormat> getFormats() const;
     void setFormats(const QVector<MediaFormat> &value);
+    void addArguments(QString arg);
 
 private:
     QStringList arguments;

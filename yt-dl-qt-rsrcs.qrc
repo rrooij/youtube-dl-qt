@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/rsrcs">
+        <file>tools/youtube-dl-qt-icon.svg</file>
+    </qresource>
+</RCC>
