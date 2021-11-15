@@ -39,3 +39,6 @@ FORMS    += \
     src/formatselectionwindow.ui \
     src/mainwindow.ui \
     src/outputwindow.ui
+
+RESOURCES += \
+    yt-dl-qt-rsrcs.qrc

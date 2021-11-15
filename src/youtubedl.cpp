@@ -109,6 +109,11 @@ QProcess* YoutubeDL::getYtdl()
     return this->ytdl;
 }
 
+void YoutubeDL::addArguments(QString arg)
+{
+    this->arguments << arg;
+}
+
 void YoutubeDL::resetArguments()
 {
     this->arguments.clear();

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Exec=/usr/bin/youtube-dl-qt
-Name=youtube-dl-qt
+Name=Youtube Downloader
 Comment=Media downloader for many streaming sites
 Icon=youtube-dl-qt-icon.svg
 Terminal=false

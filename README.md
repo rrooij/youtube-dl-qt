@@ -1,11 +1,8 @@
 # youtube-dl-qt
 
-[![Build Status](https://travis-ci.org/rrooij/youtube-dl-qt.svg?branch=master)](https://travis-ci.org/rrooij/youtube-dl-qt)
 [![License](https://img.shields.io/badge/License-GPLv3-red.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 Simple QT-frontend for [youtube-dl](https://rg3.github.io/youtube-dl/).
-
-![youtube-dl-qt](https://rrooij.github.io/youtube-dl-qt/img/ytdl-qt-screenshot.png)
 
 youtube-dl is able to download lots of videos from streaming sites, not only from YouTube.
 See [supported sites](https://rg3.github.io/youtube-dl/supportedsites.html).
@@ -15,9 +12,6 @@ See [supported sites](https://rg3.github.io/youtube-dl/supportedsites.html).
 ### GNU/Linux
 Check out the [requirements](#requirements). You can choose to compile the binary yourself or
 use the binary I compiled (found in Releases). Be sure to give the binary execution rights.
-
-#### Arch Linux
-youtube-dl-qt is available in the [AUR](https://aur.archlinux.org/packages/youtube-dl-qt-git/).
 
 ### Windows
 There is an executable installer for Windows found in the releases called `setup_windows.exe`.
@@ -65,7 +59,7 @@ I could be missing one. If this is the case, report an issue.
 
 First, clone the git repository.
 
-`clone git@github.com:rrooij/youtube-dl-qt.git`
+`clone git@github.com:ToCodeABluejay/youtube-dl-qt.git`
 
 Go into the directory:
 
