@@ -1,22 +1,18 @@
+# Maintainer: Robin de Rooij <rderooij685 at google's famous mail service dot com>
+
 pkgname=youtube-dl-qt-git
 _gitname=youtube-dl-qt
-pkgver=66.gebd26a1
+pkgver=82.g5e87881
 pkgrel=1
 pkgdesc="Qt frontend for youtube-dl"
 arch=('i686' 'x86_64')
 url="https://github.com/rrooij/youtube-dl-qt"
-license=('GPLv3')
-groups=()
-depends=('qt5-base' 'youtube-dl')
+license=('GPL3')
+depends=('qt5-base' 'youtube-dl' 'hicolor-icon-theme')
 makedepends=('git' 'make')
-checkdepends=()
-optdepends=('ffmpeg: for certain youtube-dl functionality')
+optdepends=('ffmpeg: for some youtube-dl functionality')
 provides=('youtube-dl-qt')
-options=()
-install=
-changelog=
 source=("git+https://github.com/rrooij/youtube-dl-qt")
-noextract=()
 md5sums=('SKIP')
 
 pkgver() {
